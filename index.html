@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <title>Wooden</title>
+  </head>
+  <body>
+    <div class="menu__wrapper">
+      <div class="menu__burger">
+        <hr class="menu__hr" />
+        <hr class="menu__hr" />
+        <hr class="menu__hr" />
+      </div>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__li nav__li--wooden">wooder</li>
+          <li class="nav__li">home</li>
+          <li class="nav__li">products</li>
+          <li class="nav__li">about</li>
+        </ul>
+      </nav>
+
+      <div class="menu__info">info</div>
+    </div>
+
+    <div class="fade">
+      <div class="slide red">
+        <div class="slide__text-block">
+          <div class="slide__headline">Красная шапочка ищет именно тебя</div>
+          <button class="video-block__btn slide__btn">Запишись уже сейчас</button>
+        </div>
+      </div>
+      <div class="slide green"></div>
+      <div class="slide image">
+        <div class="wooden__text">01</div>
+      </div>
+      <div class="slide blue"></div>
+    </div>
+
+    <div class="mainer">
+      <div class="description">
+        <div class="description__grid">
+          <div class="description__cell">
+            <div class="description__text-block">
+              <div class="description__title">Furniture</div>
+              <div class="description__text">
+                Wooder utilizes materials otherwise left behind, rendered
+                useless in their original intent. By creating new pieces made of
+                reclaimed barnwood
+              </div>
+              <button class="description__btn">Learn more</button>
+            </div>
+          </div>
+          <div class="description__cell">
+            <div class="description__img-block">
+              <img src="images/img1.jpg" alt="img1" class="description__img" />
+            </div>
+          </div>
+        </div>
+
+        <div class="description__grid description__grid--second">
+          <div class="description__cell">
+            <div class="description__text-block">
+              <div class="description__title">Decor</div>
+              <div class="description__text">
+                We make all types of wooden decor as per design given by
+                Architect,Interior designer, contractor which is suitable your
+                premises.
+              </div>
+              <button class="description__btn">Learn more</button>
+            </div>
+          </div>
+          <div class="description__cell">
+            <div class="description__img-block">
+              <img src="images/img2.jpg" alt="img2" class="description__img" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wooder__headline">wooder – is quality</div>
+      <hr class="wooder__headline-hr" />
+      <div class="wooder__headlie-text">
+        We create unique design objects made of rare wood, specially under the
+        order.<br />
+        Look at the short video about our work.
+      </div>
+
+      <div class="wooder__grid">
+        <div class="wooder__cell">
+          <div class="wooder__icon"></div>
+          <hr class="wooder__hr" />
+          <div class="wooder__name">Innovative Design</div>
+        </div>
+        <div class="wooder__cell">
+          <div class="wooder__icon"></div>
+          <hr class="wooder__hr" />
+          <div class="wooder__name">High-level Skills</div>
+        </div>
+        <div class="wooder__cell">
+          <div class="wooder__icon"></div>
+          <hr class="wooder__hr" />
+          <div class="wooder__name">Quality Products</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-block__wrapper">
+      <div class="video-block">
+        <div class="video-block__headline">
+          we Do the design of any complexity
+        </div>
+        <div class="video-block__description">
+          This is a team of professionals that make the furniture and wood décor
+          high standard. Creating modern designs. Adhering to the global quality
+          standards. And we are doing work with love.
+        </div>
+
+        <button class="video-block__btn">watch video</button>
+      </div>
+    </div>
+
+    <div class="about__wrapper">
+      <div class="mainer">
+        <div class="about__grid">
+          <div class="about__cell">
+            <img src="images/about-us.jpg" alt="about" class="about__img" />
+          </div>
+          <div class="about__cell">
+            <div class="about__text-block">
+              <div class="about__headline">About us</div>
+              <div class="about__description">
+                We are a team of professionals in the wood processing and the
+                creation of wooden furniture of the highest class
+              </div>
+              <button class="about__btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="mainer">
+        <div class="footer__grid">
+          <div class="footer__rights">© 2016 WOODER</div>
+          <div class="footer__logo">Wooder</div>
+          <div class="footer__author">KhalepTeam</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      $(".fade").slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: "linear",
+        arrows: false,
+      });
+    </script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
