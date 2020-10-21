@@ -99,7 +99,6 @@ a {
 // List
 ul,
 li {
-  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -264,9 +263,12 @@ $fontSecondary: 'Proxima Nova Bold';
     &--wooden{
       font-size: 36px;
       letter-spacing: 7px;
-      text-transform: uppercase;
       color: #ffffff;
     }
+  }
+
+  &__span{
+    color: red;
   }
 }
 
@@ -313,9 +315,17 @@ $fontSecondary: 'Proxima Nova Bold';
   &__text-block{
     position: absolute;
     top: 50%;
-    right: 0%;
     transform: translateY(-50%);
     max-width: 630px;
+
+    &--left{
+      right: 0;
+
+    }
+
+    &--right{
+      left: 20px;
+    }
   }
 
   &__headline{
@@ -325,10 +335,6 @@ $fontSecondary: 'Proxima Nova Bold';
     margin: 0 0 60px 0;
   }
 
-  &.image{
-    background-image: url('../images/topslide.jpg');
-    background-size: cover;
-  }
 
   &.red{
     background-image: url('../images/slide1.jpg');
@@ -371,17 +377,22 @@ $fontSecondary: 'Proxima Nova Bold';
 }
 
 .description{
-  padding: 90px 0 110px 0;
+  padding: 90px 0 0 0;
   box-sizing: border-box;
 
   &__grid{
     display: flex;
     justify-content: space-between;
-    margin: 0 0 125px 0;
+    margin: 0 0 90px 0;
 
     &--second{
       flex-direction: row-reverse;
     }
+  }
+
+  &__cell{
+    display: flex;
+    align-items: center;
   }
 
 
@@ -394,17 +405,20 @@ $fontSecondary: 'Proxima Nova Bold';
     font-family: $fontMain;
     font-size: 48px;
     color: #010101;
-    margin: 0 0 35px 0;
+    margin: 0 0 20px 0;
+    text-align: center;
   }
 
   &__text{
     margin: 0 0 35px 0;
-    font-size: 15px;
+    font-size: 25px;
+    text-align: center;
     color: #464646;
     line-height: 25px;
   }
 
   &__btn{
+    display: none;
     border: none;
     background-color: transparent;
     font-size: 14px;
@@ -436,6 +450,7 @@ $fontSecondary: 'Proxima Nova Bold';
 
   &__img{
     display: block;
+    max-width: 700px;
   }
 }
 
@@ -470,7 +485,7 @@ $fontSecondary: 'Proxima Nova Bold';
   &__grid{
     margin: 0 auto;
     display: flex;
-    padding: 0 0 160px 0;
+    padding: 160px 0;
   }
 
   &__cell{
@@ -504,6 +519,74 @@ $fontSecondary: 'Proxima Nova Bold';
     font-family: $fontMain;
     font-size: 16px;
     color: #000000;
+  }
+}
+
+.product{
+
+  &__headline{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 35px auto;
+    line-height: 60px;
+    font-family: $fontSecondary;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #bea67c;
+  }
+
+  &__description{
+    display: flex;
+    justify-content: center;
+    font-family: $fontMain;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0 0 47px 0;
+    color: #cfcfcf;
+  }
+
+  &__grid{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__cell{
+    flex-grow: 1;
+    color: white;
+    max-width: 350px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  &__h3{
+    text-align: center;
+    font-size: 25px;
+    margin: 0 0 15px 0;
+  }
+
+  &__ul{
+    list-style: disc inside;
+  }
+
+  &__li{
+    padding: 5px 0;
+    color: white;
+
+    &:first-child{
+      padding: 10px 0 5px 0;
+    }
+  }
+
+  &__span{
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+
+
+  &__wrapper{
+    background-image: url(../images/background.jpg);
+    padding: 200px 0;
   }
 }
 
