@@ -204,6 +204,7 @@ th {
 
 $fontMain: "Proxima Nova Regular";
 $fontSecondary: 'Proxima Nova Bold';
+$colorMain: #BEA67B;
 
 .mainer{
   max-width: 1200px;
@@ -222,7 +223,7 @@ $fontSecondary: 'Proxima Nova Bold';
   }
 
   &__hr{
-    background-color: #bea67c;
+    background-color: $colorMain;
     width: 100%;
     height: 1px;
   }
@@ -277,7 +278,7 @@ $fontSecondary: 'Proxima Nova Bold';
 }
 
 .slick-active{
-  background-color: #bea67c !important;
+  background-color: $colorMain !important;
 }
 
 .slick-dots{
@@ -324,12 +325,13 @@ $fontSecondary: 'Proxima Nova Bold';
     }
 
     &--right{
-      left: 20px;
+      position: static;
+      transform: translateY(50%);
     }
   }
 
   &__headline{
-    color: #bea67c;
+    color: $colorMain;
     font-size: 70px;
     font-family: $fontSecondary;
     margin: 0 0 60px 0;
@@ -355,7 +357,7 @@ $fontSecondary: 'Proxima Nova Bold';
 
 .wooden{
   &__text{
-    color: #bea67c;
+    color: $colorMain;
     font-size: 52px;
     position: absolute;
     left: 2%;
@@ -371,7 +373,7 @@ $fontSecondary: 'Proxima Nova Bold';
       display: block;
       width: 50px;
       height: 4px;
-      background-color: #bea67c;
+      background-color: $colorMain;
     }
   }
 }
@@ -384,6 +386,7 @@ $fontSecondary: 'Proxima Nova Bold';
     display: flex;
     justify-content: space-between;
     margin: 0 0 90px 0;
+    position: relative;
 
     &--second{
       flex-direction: row-reverse;
@@ -436,14 +439,14 @@ $fontSecondary: 'Proxima Nova Bold';
       transition-duration: 0.3s;
       position: absolute;
       bottom: -2px;
-      background-color: #bea67c;
+      background-color: $colorMain;
     }
 
     &:hover{
       &::before{
         width: calc(100% - 13px);
       }
-      color: #bea67c;
+      color: $colorMain;
     }
   }
 
@@ -470,7 +473,7 @@ $fontSecondary: 'Proxima Nova Bold';
     width: 44px;
     border: none;
     margin: 0 auto 27px auto;
-    background-color: #bea67c;
+    background-color: $colorMain;
   }
 
   &__headlie-text{
@@ -508,7 +511,7 @@ $fontSecondary: 'Proxima Nova Bold';
 
   &__hr{
     width: 25px;
-    background-color: #bea67c;
+    background-color: $colorMain;
     height: 1px;
     margin: 0 0 30px 0;
     border: none;
@@ -532,7 +535,7 @@ $fontSecondary: 'Proxima Nova Bold';
     font-family: $fontSecondary;
     font-size: 48px;
     text-transform: uppercase;
-    color: #bea67c;
+    color: $colorMain;
   }
 
   &__description{
@@ -585,13 +588,18 @@ $fontSecondary: 'Proxima Nova Bold';
 
 
   &__wrapper{
-    background-image: url(../images/background.jpg);
-    padding: 200px 0;
+    background-image: url(../images/temp__pic6.jpg);
+    background-size: cover;
+
+    &--darken{
+      background-color: rgba(1, 1, 1, 0.7);
+      padding: 200px 0;
+    }
   }
 }
 
 .video-block{
-  border: 1px solid #bea67c;
+  border: 1px solid $colorMain;
   padding: 215px 110px 180px 385px;
   
   &__headline{
@@ -601,7 +609,7 @@ $fontSecondary: 'Proxima Nova Bold';
     font-family: $fontSecondary;
     font-size: 48px;
     text-transform: uppercase;
-    color: #bea67c;
+    color: $colorMain;
     position: relative;
 
     &::before{
@@ -629,7 +637,7 @@ $fontSecondary: 'Proxima Nova Bold';
       content: '';
       width: 44px;
       height: 4px;
-      background-color: #bea67c;
+      background-color: $colorMain;
       display: block;
       position: absolute;
       top: 20%;
@@ -652,14 +660,18 @@ $fontSecondary: 'Proxima Nova Bold';
     transition-duration: 0.3s;
 
     &:hover{
-      border-color: #bea67c;
-      color: #bea67c
+      border-color: $colorMain;
+      color: $colorMain;
     }
   }
   &__wrapper{
-    padding: 90px 180px;
+    background-image: url(../images/temp__pic7.jpg);
     background-size: cover;
-    background-image: url('../images/background.jpg');
+
+    &--darken{
+      background-color: rgba(1, 1, 1, 0.7);
+      padding: 90px 180px;      
+    }
   }
 }
 
@@ -701,7 +713,7 @@ $fontSecondary: 'Proxima Nova Bold';
       content: '';
       width: 44px;
       height: 4px;
-      background-color: #bea67c;
+      background-color: $colorMain;
       display: block;
       position: absolute;
       top: 20%;
@@ -733,14 +745,14 @@ $fontSecondary: 'Proxima Nova Bold';
       transition-duration: 0.3s;
       position: absolute;
       bottom: -2px;
-      background-color: #bea67c;
+      background-color: $colorMain;
     }
 
     &:hover{
       &::before{
         width: calc(100% - 13px);
       }
-      color: #bea67c;
+      color: $colorMain;
     }
   }
 
