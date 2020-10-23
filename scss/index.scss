@@ -206,6 +206,10 @@ $fontMain: "Proxima Nova Regular";
 $fontSecondary: 'Proxima Nova Bold';
 $colorMain: #BEA67B;
 
+.fas, .far{
+  font-size: 35px;
+}
+
 .mainer{
   max-width: 1200px;
   width: 100%;
@@ -460,12 +464,19 @@ $colorMain: #BEA67B;
 
 .wooder{
   &__headline{
-    font-family: $fontSecondary;
     font-size: 48px;
     color: #000000;
     margin: 0 auto 32px auto;
     text-transform: uppercase;
     text-align: center;
+  }
+
+  &__preheadline-hr{
+    height: 4px;
+    width: 100%;
+    border: none;
+    margin: 0 auto 70px auto;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   &__headline-hr{
@@ -476,13 +487,12 @@ $colorMain: #BEA67B;
     background-color: $colorMain;
   }
 
-  &__headlie-text{
-    font-size: 15px;
+  &__headline-text{
     text-align: center;
     margin: 0 auto 80px auto;
     color: #636262;
-    max-width: 550px;
-    line-height: 26px;
+    font-size: 25px;
+    line-height: 30px;
   }
 
   &__grid{
@@ -492,10 +502,22 @@ $colorMain: #BEA67B;
   }
 
   &__cell{
-    flex-grow: 1;
+    max-width: 400px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &--left{
+      transform: translateY(100px);
+    }
+    
+    &--middle{
+    }
+
+    &--right{
+      transform: translateY(-100px);
+    }
   }
 
   &__icon{
@@ -504,9 +526,21 @@ $colorMain: #BEA67B;
     border: 13px solid white;
     padding: 13px;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px #e4e4e4;
-    background-color: #e4e4e4;
+    box-shadow: 0 0 0 1px black;
+    background-color: rgb(0, 0, 0);
     margin: 0 0 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+
+
+  }
+
+  &__text{
+    text-align: center;
+    line-height: 20px;
+    color: white;
   }
 
   &__hr{
@@ -519,15 +553,21 @@ $colorMain: #BEA67B;
   }
 
   &__name{
-    font-family: $fontMain;
-    font-size: 16px;
-    color: #000000;
+    text-align: center;
+    font-family: $fontMain;    
+    color: #000;
+    font-size: 25px;
+    line-height: 30px;
   }
 }
 
 .product{
+  position: relative;
 
   &__headline{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150px);
     display: flex;
     justify-content: center;
     margin: 0 auto 35px auto;
@@ -539,13 +579,14 @@ $colorMain: #BEA67B;
   }
 
   &__description{
+    transform: translateY(-80px);
     display: flex;
     justify-content: center;
-    font-family: $fontMain;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 25px;
     margin: 0 0 47px 0;
-    color: #cfcfcf;
+    text-align: center;
+    color: white;
   }
 
   &__grid{
@@ -559,11 +600,19 @@ $colorMain: #BEA67B;
     max-width: 350px;
     padding: 0 20px;
     box-sizing: border-box;
+
+    &:first-child{
+      transform: translateY(-100px);
+    }
+
+    &:last-child{
+      transform: translateY(225px);
+    }
   }
 
   &__h3{
     text-align: center;
-    font-size: 25px;
+    font-size: 40px;
     margin: 0 0 15px 0;
   }
 
@@ -574,6 +623,8 @@ $colorMain: #BEA67B;
   &__li{
     padding: 5px 0;
     color: white;
+    font-size: 20px;
+    line-height: 22px;
 
     &:first-child{
       padding: 10px 0 5px 0;
@@ -581,14 +632,17 @@ $colorMain: #BEA67B;
   }
 
   &__span{
-    font-size: 15px;
-    line-height: 20px;
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    width: 100%;
+    text-align: center;
   }
 
 
 
   &__wrapper{
-    background-image: url(../images/temp__pic6.jpg);
+    background-image: url(../images/temp__pic4.jpg);
     background-size: cover;
 
     &--darken{
@@ -600,27 +654,26 @@ $colorMain: #BEA67B;
 
 .video-block{
   border: 1px solid $colorMain;
-  padding: 215px 110px 180px 385px;
+  padding: 215px 110px 180px 200px;
   
   &__headline{
-    max-width: 505px;
     margin: 0 0 35px 0;
     line-height: 60px;
     font-family: $fontSecondary;
-    font-size: 48px;
+    font-size: 40px;
     text-transform: uppercase;
     color: $colorMain;
     position: relative;
 
     &::before{
       content: '';
-      width: 150px;
+      width: 120px;
       height: 1px;
       background-color: white;
       display: block;
       position: absolute;
-      top: 20%;
-      left: -175px;
+      top: 50%;
+      left: -130px;
     }
   }
 
@@ -665,7 +718,7 @@ $colorMain: #BEA67B;
     }
   }
   &__wrapper{
-    background-image: url(../images/temp__pic7.jpg);
+    background-image: url(../images/temp__pic5.jpg);
     background-size: cover;
 
     &--darken{
