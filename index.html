@@ -25,10 +25,10 @@
 
       <nav class="nav">
         <ul class="nav__ul">
-          <li class="nav__li">home</li>
-          <li class="nav__li">products</li>
-          <li class="nav__li">about</li>
-          <li class="nav__li">contacts</li>
+          <li class="nav__li"><a href="" class="nav__a">home</a></li>
+          <li class="nav__li"><a href="" class="nav__a">products</a></li>
+          <li class="nav__li"><a href="" class="nav__a">about</a></li>
+          <li class="nav__li"><a href="" class="nav__a">contacts</a></li>
         </ul>
       </nav>
 
@@ -41,9 +41,9 @@
             Заинтересуй девушку собой,<br />
             а не своими деньгами
           </div>
-          <button class="video-block__btn slide__btn">
+          <a href='#action-block' class="video-block__btn slide__btn">
             Запишись уже сейчас
-          </button>
+          </a>
         </div>
       </div>
       <div class="slide green">
@@ -53,9 +53,9 @@
               Удивляй поступками,<br />
               а не дорогими подарками
             </div>
-            <button class="video-block__btn slide__btn">
+            <a href='#action-block' class="video-block__btn slide__btn">
               Запишись уже сейчас
-            </button>
+            </a>
           </div>
         </div>
 
@@ -68,9 +68,9 @@
             Управляй отношениями,<br />
             а не потокай её капризам
           </div>
-          <button class="video-block__btn slide__btn">
+          <a href='#action-block' class="video-block__btn slide__btn">
             Запишись уже сейчас
-          </button>
+          </a>
         </div>
 
       </div>
@@ -141,11 +141,11 @@
       <div class="wooder__headline-text">
         Думаешь девушек в мужчинах интересует только
         <strike>бабло и тачки</strike> финансовое состояние? <br />
-        Значит такими они будут для тебя!<br />
+        Значит такими они и будут для тебя!<br />
         <br />
         <h2>НО</h2>
         <br />
-        Есть и тот кто получает секс не тратя на них ни копейки<br />
+        Есть и тот кто получает секс не тратя на них ни копейки.<br />
         К такому она и поедет, после того как ты сводишь её в дорогой ресторан.
         <br />
         На месте того парня можешь быть и ты!
@@ -220,7 +220,7 @@
       </div>
     </div>
 
-    <div class="video-block__wrapper">
+    <div class="video-block__wrapper" id='action-block'>
       <div class="video-block__wrapper--darken">
         <div class="video-block">
           <div class="video-block__headline">
@@ -231,10 +231,9 @@
             иди к нам. Мы не проводим тренинг для людей, у которых нет цели
           </div>
   
-          <button class="video-block__btn">watch video</button>
+          <button class="video-block__btn modal_btn--js">watch video</button>
         </div>
       </div>
-
     </div>
 
     <div class="about__wrapper">
@@ -257,6 +256,7 @@
       </div>
     </div>
 
+
     <footer class="footer">
       <div class="mainer">
         <div class="footer__grid">
@@ -266,6 +266,14 @@
         </div>
       </div>
     </footer>
+
+    <div class="form__wrapper">
+      <form action="" class="form">
+        <input class='form__input' type="text" name='name' placeholder="Ваше имя">
+        <input class='form__input' type="number" name='num' placeholder="Номер телефона">
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
 
     <script>
       $(".fade").slick({
