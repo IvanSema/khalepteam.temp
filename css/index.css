@@ -707,17 +707,66 @@ th {
   padding: 90px 180px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 .form {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #BEA67B;
   display: flex;
-  padding: 100px 40px;
+  padding: 50px 25px;
+  border-radius: 10px;
   flex-direction: column;
+}
+
+.form__action {
+  color: #BEA67B;
+  font-size: 30px;
+  margin: 0 0 30px 0;
+  font-family: "Proxima Nova Regular";
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .form__input {
   width: 100%;
   height: 30px;
   margin: 0 0 30px 0;
+  padding: 0 10px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.form__input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.form__btn {
+  border: 1px solid white;
+  background-color: #000;
+  color: white;
+  padding: 10px 0;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.form__btn:hover {
+  color: #BEA67B;
+  border-color: #BEA67B;
+}
+
+.form__headline {
+  display: block;
+  color: white;
+  margin: 0 0 10px 0;
 }
 
 .form__wrapper {
@@ -853,4 +902,24 @@ th {
   font-family: "Proxima Nova Regular";
   color: #464646;
   font-family: 15px;
+}
+
+.footer__ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row-reverse;
+}
+
+.footer__li {
+  padding: 0 10px;
+  transition-duration: 0.3s;
+}
+
+.footer__li:hover {
+  transform: scale(1.5);
+}
+
+.footer__a {
+  font-size: 20px;
+  color: white;
 }

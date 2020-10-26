@@ -25,16 +25,16 @@
 
       <nav class="nav">
         <ul class="nav__ul">
-          <li class="nav__li"><a href="" class="nav__a">home</a></li>
-          <li class="nav__li"><a href="" class="nav__a">products</a></li>
-          <li class="nav__li"><a href="" class="nav__a">about</a></li>
-          <li class="nav__li"><a href="" class="nav__a">contacts</a></li>
+          <li class="nav__li"><a href="#home" class="nav__a">Главная</a></li>
+          <li class="nav__li"><a href="#conception" class="nav__a">Концепция</a></li>
+          <li class="nav__li"><a href="#action-block" class="nav__a">Консультация</a></li>
+          <li class="nav__li"><a href="#contacts" class="nav__a">Контакты</a></li>
         </ul>
       </nav>
 
     </div>
 
-    <div class="fade">
+    <div class="fade" id='home'>
       <div class="slide red">
         <div class="slide__text-block slide__text-block--left">
           <div class="slide__headline">
@@ -136,7 +136,7 @@
 
 
 
-      <div class="wooder__headline">Узнаешь себя?</div>
+      <div class="wooder__headline" id='conception'>Узнаешь себя?</div>
       <hr class="wooder__headline-hr" />
       <div class="wooder__headline-text">
         Думаешь девушек в мужчинах интересует только
@@ -191,12 +191,12 @@
       <div class="wooder__grid">
         <div class="wooder__cell wooder__cell--left">
           <div class="wooder__icon">
-            <span class="wooder__text"><i class="fas fa-wallet"></i></span>
+            <span class="wooder__text"><i class="fas fa-wallet"></i><br>Преимущество</span>
           </div>
           <hr class="wooder__hr" />
           <div class="wooder__name">
             То чувство, когда на бывшую потратил в десятки раз больше чем на
-            тренинг, а секс получил и там, и там
+            тренинг
           </div>
         </div>
 
@@ -236,7 +236,7 @@
       </div>
     </div>
 
-    <div class="about__wrapper">
+    <div class="about__wrapper" id="contacts">
       <div class="mainer">
         <div class="about__grid">
           <div class="about__cell">
@@ -244,10 +244,10 @@
           </div>
           <div class="about__cell">
             <div class="about__text-block">
-              <div class="about__headline">About us</div>
+              <div class="about__headline">О нас</div>
               <div class="about__description">
-                We are a team of professionals in the wood processing and the
-                creation of wooden furniture of the highest class
+                LoveVSCash - команда тренеров, которых объединяет идея изменения мужского мышления касательно построения отношений с женщинами.
+                Каждый из нас прошел этот тернистый путь и готов поделиться опытом 
               </div>
               <button class="about__btn">Learn more</button>
             </div>
@@ -260,18 +260,22 @@
     <footer class="footer">
       <div class="mainer">
         <div class="footer__grid">
-          <div class="footer__rights">© 2016 WOODER</div>
-          <div class="footer__logo">Wooder</div>
-          <div class="footer__author">KhalepTeam</div>
+          <div class="menu__logo nav__li nav__li--wooden">Love<span class="nav__span">VS</span>Cash</div>
+          <ul class="footer__ul">
+            <li class="footer__li"><a href="#" class="footer__a footer__a--inst"><i class="fab fa-instagram"></i></a></li>
+            <li class="footer__li"><a href="#" class="footer__a footer__a--yt"><i class="fab fa-youtube"></i></a></li></ul>
         </div>
       </div>
     </footer>
 
     <div class="form__wrapper">
-      <form action="" class="form">
+      <form method="POST" action="/php/app.php" class="form">
+        <h2 class="form__action">Действуй!</h2>
+        <h3 class="form__headline">Введите Ваше имя:</h3>
         <input class='form__input' type="text" name='name' placeholder="Ваше имя">
+        <h3 class="form__headline">И номер телефона:</h3>
         <input class='form__input' type="number" name='num' placeholder="Номер телефона">
-        <button type="submit">Отправить</button>
+        <button type="submit" class='form__btn'>Отправить</button>  
       </form>
     </div>
 
