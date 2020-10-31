@@ -372,13 +372,12 @@
       var swiper = new Swiper(".swiper-container", {
         direction: "vertical",
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
+          clickable: true
         },
         speed: 1000,
         spaceBetween: 100,
         effect: "fade",
-        noSwiping: false,
-        allowTouchMove: false,
         autoplay: {
           delay: 5000,
         },
