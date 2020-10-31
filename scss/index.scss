@@ -345,8 +345,11 @@ $colorMain: #BEA67B;
   width: 100%;
   height: 100%;
   position: relative;
-  background-position: center;
   background-size: cover;
+
+  @media screen and (max-width: 1000px){
+    background-position: center;
+  }
 
   &__text-block{
     position: absolute;
