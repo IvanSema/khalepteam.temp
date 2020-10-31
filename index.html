@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+
     <script
       type="text/javascript"
       src="//code.jquery.com/jquery-1.11.0.min.js"
@@ -14,72 +14,103 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/bb2a3a56fb.js" crossorigin="anonymous"></script>
+
+    <script
+      src="https://kit.fontawesome.com/bb2a3a56fb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <title>Wooden</title>
   </head>
   <body>
     <div class="menu__wrapper">
+      <div class="menu__logo">
+        Love<span class="nav__span">VS</span>Cash
+      </div>
 
-      <div class="menu__logo nav__li nav__li--wooden">Love<span class="nav__span">VS</span>Cash</div>
+      <div class="menu__burger">
+        <hr class="menu__hr">
+        <hr class="menu__hr">
+        <hr class="menu__hr">
+      </div>
 
       <nav class="nav">
         <ul class="nav__ul">
           <li class="nav__li"><a href="#home" class="nav__a">Главная</a></li>
-          <li class="nav__li"><a href="#conception" class="nav__a">Концепция</a></li>
-          <li class="nav__li"><a href="#action-block" class="nav__a">Консультация</a></li>
-          <li class="nav__li"><a href="#contacts" class="nav__a">Контакты</a></li>
+          <li class="nav__li">
+            <a href="#conception" class="nav__a">Концепция</a>
+          </li>
+          <li class="nav__li">
+            <a href="#action-block" class="nav__a">Консультация</a>
+          </li>
+          <li class="nav__li">
+            <a href="#contacts" class="nav__a">Контакты</a>
+          </li>
         </ul>
       </nav>
-
     </div>
 
-    <div class="fade" id='home'>
-      <div class="slide red">
-        <div class="slide__text-block slide__text-block--left">
-          <div class="slide__headline">
-            Заинтересуй девушку собой,<br />
-            а не своими деньгами
-          </div>
-          <a href='#action-block' class="video-block__btn slide__btn">
-            Запишись уже сейчас
-          </a>
-        </div>
-      </div>
-      <div class="slide green">
-        <div class="mainer">
-          <div class="slide__text-block slide__text-block--right">
-            <div class="slide__headline">
-              Удивляй поступками,<br />
-              а не дорогими подарками
+    <!-- Swiper -->
+    <div class="swiper-container" id="home">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide red">
+            <div class="slide__text-block slide__text-block--left">
+              <div class="slide__headline">
+                Заинтересуй девушку собой,<br />
+                а не своими деньгами
+              </div>
+              <a href="#action-block" class="video-block__btn slide__btn">
+                Запишись уже сейчас
+              </a>
             </div>
-            <a href='#action-block' class="video-block__btn slide__btn">
-              Запишись уже сейчас
-            </a>
           </div>
         </div>
-
-        
-      </div>
-
-      <div class="slide blue">
-        <div class="slide__text-block slide__text-block--left">
-          <div class="slide__headline">
-            Управляй отношениями,<br />
-            а не потокай её капризам
+        <div class="swiper-slide">
+          <div class="slide green">
+            <div class="mainer">
+              <div class="slide__text-block slide__text-block--right">
+                <div class="slide__headline">
+                  Удивляй поступками,<br />
+                  а не дорогими подарками
+                </div>
+                <a href="#action-block" class="video-block__btn slide__btn">
+                  Запишись уже сейчас
+                </a>
+              </div>
+            </div>
           </div>
-          <a href='#action-block' class="video-block__btn slide__btn">
-            Запишись уже сейчас
-          </a>
         </div>
-
+        <div class="swiper-slide">
+          <div class="slide blue">
+            <div class="slide__text-block slide__text-block--left">
+              <div class="slide__headline">
+                Управляй отношениями,<br />
+                а не потокай её капризам
+              </div>
+              <a href="#action-block" class="video-block__btn slide__btn">
+                Запишись уже сейчас
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
 
     <div class="mainer">
       <div class="description">
-
-        <div class="description__grid description__grid--second">
+        <div class="description__grid">
           <div class="description__cell">
             <div class="description__text-block">
               <div class="description__title">Деньги</div>
@@ -91,18 +122,23 @@
           </div>
           <div class="description__cell">
             <div class="description__img-block">
-              <img src="images/flowers.jpg" alt="img2" class="description__img" />
+              <img
+                src="images/flowers.jpg"
+                alt="img2"
+                class="description__img"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <div class="description__grid">
+      <div class="description__grid description__grid--second">
         <div class="description__cell">
           <div class="description__text-block">
             <div class="description__title">Секс</div>
             <div class="description__text">
-              Хочешь попробовать что-то новое, но уже знаешь почему это невозможно?
+              Хочешь попробовать что-то новое, но уже знаешь почему это
+              невозможно?
             </div>
             <button class="description__btn">Learn more</button>
           </div>
@@ -114,29 +150,30 @@
         </div>
       </div>
 
-
-        <div class="description__grid description__grid--second">
-          <div class="description__cell">
-            <div class="description__text-block">
-              <div class="description__title">Любовь</div>
-              <div class="description__text">
-                Выражаешь заботу финансовой поддержкой?
-              </div>
-              <button class="description__btn">Learn more</button>
+      <div class="description__grid description__grid--last">
+        <div class="description__cell">
+          <div class="description__text-block">
+            <div class="description__title">Любовь</div>
+            <div class="description__text">
+              Выражаешь заботу финансовой поддержкой?
             </div>
-          </div>
-          <div class="description__cell">
-            <div class="description__img-block">
-              <img src="images/finance.jpg" alt="finances" class="description__img" />
-            </div>
+            <button class="description__btn">Learn more</button>
           </div>
         </div>
+        <div class="description__cell">
+          <div class="description__img-block">
+            <img
+              src="images/finance.jpg"
+              alt="finances"
+              class="description__img"
+            />
+          </div>
+        </div>
+      </div>
 
-      <hr class="wooder__preheadline-hr" />
+      <div class="wooder__preheadline-hr" id="conception"></div>
 
-
-
-      <div class="wooder__headline" id='conception'>Узнаешь себя?</div>
+      <div class="wooder__headline">Узнаешь себя?</div>
       <hr class="wooder__headline-hr" />
       <div class="wooder__headline-text">
         Думаешь девушек в мужчинах интересует только
@@ -156,82 +193,104 @@
       <div class="product__wrapper--darken">
         <div class="mainer">
           <div class="product">
-            <div class="product__headline">Решение</div>
+            <div class="product__headline">Подсказка</div>
             <div class="product__description">
-              Что же это за волшебная таблетка, <br>которая превратит тебя из кошелька
-              в желанного мужчину?
+              Что же это за волшебная таблетка, <br />которая превратит тебя из
+              кошелька в желанного мужчину?
             </div>
-  
+
             <div class="product__grid">
               <div class="product__cell">
-                <h3 class="product__h3">8 часов</h3> <span class="product__span">теории, которая сломает твои представления о
-                  стандартных взаимоотношениях между мужчиной и женщиной</span>
+                <h3 class="product__h3">8 часов</h3>
+                <span class="product__span"
+                  >теории, которая сломает твои представления о стандартных
+                  взаимоотношениях между мужчиной и женщиной</span
+                >
               </div>
               <div class="product__cell">
-                <h3 class="product__h3">16 часов</h3> <span class="product__span">практики, за которые:</span>
+                <h3 class="product__h3">16 часов</h3>
+                <span class="product__span">практики, за которые:</span>
                 <ul class="product__ul">
-                  <li class="product__li">Не деньги станут твоим главным козырем</li>
-                  <li class="product__li">Секс начнешь получать не за последний айфон, а за своё
-                    внимание</li>
-                  <li class="product__li">Сценарий отношений будет в твоих руках</li>
+                  <li class="product__li">
+                    Не деньги станут твоим главным козырем
+                  </li>
+                  <li class="product__li">
+                    Секс начнешь получать не за последний айфон, а за своё
+                    внимание
+                  </li>
+                  <li class="product__li">
+                    Сценарий отношений будет в твоих руках
+                  </li>
                 </ul>
               </div>
               <div class="product__cell">
-                <h3 class="product__h3">24/7</h3> <span class="product__span">поддержка в социальных сетях и по телефону в
-                  течении прохождения тренинга</span>
+                <h3 class="product__h3">24/7</h3>
+                <span class="product__span"
+                  >поддержка в социальных сетях и по телефону в течении
+                  прохождения тренинга</span
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="mainer">
       <div class="wooder__grid">
         <div class="wooder__cell wooder__cell--left">
           <div class="wooder__icon">
-            <span class="wooder__text"><i class="fas fa-wallet"></i><br>Преимущество</span>
+            <span class="wooder__text"
+              ><i class="fas fa-wallet"></i><br />Преимущество</span
+            >
           </div>
           <hr class="wooder__hr" />
           <div class="wooder__name">
-            То чувство, когда на бывшую потратил в десятки раз больше чем на
-            тренинг
+            Опыт наших учеников показал, что на бывшую уходит в десятки раз
+            больше чем на тренинг
           </div>
         </div>
 
         <div class="wooder__cell wooder__cell--middle">
           <div class="wooder__icon">
-            <span class="wooder__text"><i class="far fa-handshake"></i><br>Индивидуальный<br>подход</span></div>
+            <span class="wooder__text"
+              ><i class="far fa-handshake"></i
+              ><br />Индивидуальный<br />подход</span
+            >
+          </div>
           <hr class="wooder__hr" />
-          <div class="wooder__name">Время и место занятий выбираем подходящее для тебя</div>
+          <div class="wooder__name">
+            Время и место занятий выбираем подходящее для тебя
+          </div>
         </div>
 
         <div class="wooder__cell wooder__cell--right">
           <div class="wooder__icon">
-            <span class="wooder__text"><i class="fas fa-dollar-sign"></i><br>Гарантия<br>результата</span></div>
+            <span class="wooder__text"
+              ><i class="fas fa-dollar-sign"></i
+              ><br />Гарантия<br />результата</span
+            >
+          </div>
           <hr class="wooder__hr" />
           <div class="wooder__name">
             Если с нами ты не получишь ожидаемого результата, в отличии от
             бывшей, мы вернем деньги
           </div>
         </div>
-
       </div>
     </div>
 
-    <div class="video-block__wrapper" id='action-block'>
+    <div class="video-block__wrapper" id="action-block">
       <div class="video-block__wrapper--darken">
         <div class="video-block">
-          <div class="video-block__headline">
-            Зачем тебе это нужно?
-          </div>
+          <div class="video-block__headline">Зачем тебе это нужно?</div>
           <div class="video-block__description">
-            Перед консультацией тебе нужно понять чего ты хочешь и только тогда
-            иди к нам. Мы не проводим тренинг для людей, у которых нет цели
+            Перед консультацией определись со своей целью и мы составим план
+            достижения с четкими сроками. Мы не проводим тренинг для людей,
+            которые боятся становиться тем человеком, которым хотят быть
           </div>
-  
-          <button class="video-block__btn modal_btn--js">watch video</button>
+
+          <button class="video-block__btn modal_btn--js">Записаться!</button>
         </div>
       </div>
     </div>
@@ -246,47 +305,91 @@
             <div class="about__text-block">
               <div class="about__headline">О нас</div>
               <div class="about__description">
-                LoveVSCash - команда тренеров, которых объединяет идея изменения мужского мышления касательно построения отношений с женщинами.
-                Каждый из нас прошел этот тернистый путь и готов поделиться опытом 
+                LoveVSCash - команда тренеров, которых объединяет идея изменения
+                мужского мышления касательно построения отношений с женщинами.
+                Каждый из нас прошел этот тернистый путь от славного парня до
+                уверенного в себе мужчины.
+                <br />
+                <br />
+                Какое знакомство изменило твою жизнь?
+                <br />
+                Подготовься к следующему.
               </div>
-              <button class="about__btn">Learn more</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-
     <footer class="footer">
       <div class="mainer">
         <div class="footer__grid">
-          <div class="menu__logo nav__li nav__li--wooden">Love<span class="nav__span">VS</span>Cash</div>
+          <div class="footer__num">
+            <span class="footer__span">+380930323459</span
+            ><span class="footer__span footer__span--red">Тарас</span>
+          </div>
           <ul class="footer__ul">
-            <li class="footer__li"><a href="#" class="footer__a footer__a--inst"><i class="fab fa-instagram"></i></a></li>
-            <li class="footer__li"><a href="#" class="footer__a footer__a--yt"><i class="fab fa-youtube"></i></a></li></ul>
+            <li class="footer__li">
+              <a href="#" class="footer__a footer__a--inst"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="footer__li">
+              <a href="#" class="footer__a footer__a--yt"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
 
     <div class="form__wrapper">
-      <form method="POST" action="/php/app.php" class="form">
+      <form method="POST" action="tg.php" class="form" id="ajax_form">
         <h2 class="form__action">Действуй!</h2>
         <h3 class="form__headline">Введите Ваше имя:</h3>
-        <input class='form__input' type="text" name='name' placeholder="Ваше имя">
+        <input
+          required
+          class="form__input"
+          type="text"
+          name="name"
+          placeholder="Ваше имя"
+        />
         <h3 class="form__headline">И номер телефона:</h3>
-        <input class='form__input' type="number" name='num' placeholder="Номер телефона">
-        <button type="submit" class='form__btn'>Отправить</button>  
+        <input
+          required
+          class="form__input"
+          type="text"
+          name="num"
+          id="phone"
+          placeholder="+38("
+        />
+        <button type="submit" class="form__btn" id="btn">Отправить</button>
       </form>
     </div>
 
     <script>
-      $(".fade").slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: "linear",
-        arrows: false,
+      var swiper = new Swiper(".swiper-container", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        speed: 1000,
+        spaceBetween: 100,
+        effect: "fade",
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    </script>
+
+    <script src='js/ajax.js'></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+      $(function () {
+        $('#phone').mask('+38(000)-000-00-00');
       });
     </script>
     <script src="js/index.js"></script>

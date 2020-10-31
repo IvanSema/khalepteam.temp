@@ -45,3 +45,31 @@ function hideForm(){
 }
 
 btn.addEventListener('click', toggleForm);
+
+// burger
+
+const burger = document.querySelector('.menu__burger');
+const menu_wrapper = document.querySelector('.menu__wrapper')
+const burger_wrapper = document.querySelector('.nav');
+const width = document.documentElement.clientWidth
+
+function showBurger(){
+    burger_wrapper.style.display = 'flex';
+    console.log(burger_wrapper.style);
+
+
+    burger_wrapper.style.top = 0 + 'px';
+    burger_wrapper.style.left = 0 + 'px';
+    burger_wrapper.style.width = width + 'px';
+}
+
+function hideBurger(){
+    console.log(4);
+    if(width < 1000){
+        burger_wrapper.style.display = 'none';
+    }
+}
+
+
+burger.addEventListener('click', showBurger);
+burger_wrapper.addEventListener('click', hideBurger)
