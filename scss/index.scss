@@ -209,6 +209,8 @@ th {
 $fontMain: "Proxima Nova Regular";
 $fontSecondary: 'Proxima Nova Bold';
 $colorMain: #BEA67B;
+$descriptionMobile: 15px;
+$headlineMobile: 30px;
 
 .fas, .far{
   font-size: 35px;
@@ -258,6 +260,7 @@ $colorMain: #BEA67B;
     z-index: 100; 
     width: 100%;
     transition-duration: 0.3s;
+
   }
 
   &__logo{
@@ -351,6 +354,7 @@ $colorMain: #BEA67B;
   @media screen and (max-width: 1000px){
     background-position: center;
   }
+ 
 
   &__text-block{
     position: absolute;
@@ -370,16 +374,50 @@ $colorMain: #BEA67B;
     }
 
     @media screen and (max-width: 500px){
-      width: 90%;  
+      width: 90%;
+      top: 60%;
+      transform: none;
+      left: 50%;
+      transform: translateX(-50%);  
     }
 
     &--left{
       right: 0;
+
+      @media screen and (max-width: 350px){
+        width: 90%;
+        top: 40%;
+        transform: none;
+        left: 50%;
+        transform: translateX(-50%);  
+      }
     }
 
     &--right{
-      position: static;
-      transform: translateY(50%);
+        position: absolute;
+        left: 15%;
+        transform: translate(-50% -50%);
+        
+        @media screen and (max-width: 700px){
+          text-align: left;
+
+          & a{
+            margin: 0 !important;
+          }
+        }
+        
+        @media screen and (max-width: 500px){
+          left: 50%;
+          transform: translate(-50% -50%);
+        }
+
+        @media screen and (max-width: 350px){
+          width: 90%;
+          top: 50%;
+          transform: none;
+          left: 50%;
+          transform: translateX(-50%);  
+        }
     }
   }
 
@@ -409,7 +447,8 @@ $colorMain: #BEA67B;
 
     @media screen and (max-width: 500px){
       font-size: 35px;
-      text-align: center;  
+      text-align: center;
+      margin: 0 0 30px 0;  
     }
   }
 
@@ -417,16 +456,28 @@ $colorMain: #BEA67B;
   &.red{
     background-image: url('../images/slide1.jpg');
     background-size: cover;
+
+    @media screen and (max-width: 500px){
+      background-position: 40%;
+    }
   }
 
   &.green{
     background-image: url('../images/slide2.jpg');
     background-size: cover;
+
+    @media screen and (max-width: 500px){
+      background-position: 70%;
+    }
   }
 
   &.blue{
     background-image: url('../images/slide3.jpg');
     background-size: cover;
+
+    @media screen and (max-width: 500px){
+      background-position: 40%;
+    }
   }
 }
 
@@ -465,12 +516,20 @@ $colorMain: #BEA67B;
     position: relative;
     flex-direction: row-reverse;
 
+    @media screen and (max-width: 500px){
+      margin: 0 0 50px 0;
+    }
+
     &--second{
       flex-direction: row;
     }
 
     &--last{
       margin: 0 0 90px 0;
+
+      @media screen and (max-width: 500px){
+        margin: 0 0 50px 0;
+      }
     }
 
     @media screen and (max-width: 1100px){
@@ -512,6 +571,10 @@ $colorMain: #BEA67B;
     text-align: center;
     color: #464646;
     line-height: 25px;
+
+    @media screen and (max-width: 550px){
+      font-size: $descriptionMobile;
+    }
   }
 
   &__btn{
@@ -560,6 +623,22 @@ $colorMain: #BEA67B;
     margin: 0 auto 32px auto;
     text-transform: uppercase;
     text-align: center;
+
+    @media screen and (max-width: 530px){
+      font-size: 40px;
+    }
+  }
+
+  &__br{
+    @media screen and (max-width: 530px){
+      display: none;
+    }
+  }
+
+  &__h2{
+    @media screen and (max-width: 530px){
+      margin: 10px 0;
+    }
   }
 
   &__preheadline-hr{
@@ -578,6 +657,10 @@ $colorMain: #BEA67B;
       border: none;
       background-color: rgba(0, 0, 0, 0.7);
       transform: translateY(90px);
+
+      @media screen and (max-width: 500px){
+        transform: translateY(100px);
+      }
     }
   }
 
@@ -595,6 +678,15 @@ $colorMain: #BEA67B;
     color: #636262;
     font-size: 25px;
     line-height: 30px;
+
+    @media screen and (max-width: 800px){
+      font-size: 18px;    }
+
+    @media screen and (max-width: 500px){
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 auto 50px auto;
+    }
   }
 
   &__grid{
@@ -605,6 +697,11 @@ $colorMain: #BEA67B;
     @media screen and (max-width: 860px){
       flex-direction: column;
       align-items: center;
+      padding: 80px 0 50px 0;
+    }
+
+    @media screen and (max-width: 550px){
+      padding: 50px 0 20px 0;
     }
   }
 
@@ -651,6 +748,11 @@ $colorMain: #BEA67B;
     align-items: center;
     justify-content: center;
     opacity: 0.6;
+
+    @media screen and (max-width: 550px){
+      width: 200px;
+      height: 200px;
+    }
     }
 
   &__text{
@@ -678,6 +780,10 @@ $colorMain: #BEA67B;
     @media screen and (max-width: 860px){
       width: 80%;
     }
+
+    @media screen and (max-width: 550px){
+      font-size: calc($headlineMobile / 2);
+    }
   }
 }
 
@@ -697,6 +803,16 @@ $colorMain: #BEA67B;
     text-transform: uppercase;
     color: $colorMain;
     letter-spacing: 2px;
+
+    @media screen and (max-width: 800px){
+      transform: none;
+      position: static;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 500px){
+      font-size: 35px;
+    }
   }
 
   &__description{
@@ -708,6 +824,22 @@ $colorMain: #BEA67B;
     margin: 0 0 47px 0;
     text-align: center;
     color: white;
+
+    @media screen and (max-width: 800px){
+      transform: none;
+      font-size: 18px;
+    }
+    
+    @media screen and (max-width: 570px){
+      width: 70%;
+      margin: 0 auto 40px auto;
+    }
+
+    @media screen and (max-width: 550px){
+      font-size: $descriptionMobile;
+      line-height: 20px;
+    }
+
   }
 
   &__grid{
@@ -730,6 +862,32 @@ $colorMain: #BEA67B;
       margin: 0 0 40px 0;
       max-width: none;
       text-align: center;
+    }
+
+    &--second{
+      position: relative;
+      
+      @media screen and (max-width: 800px){
+        padding: 40px 0;
+        &::before, &::after{
+          display: block;
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: $colorMain;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &::before{
+          top: 0;
+        }
+
+        &::after{
+          bottom: 0;
+        }
+      }
 
     }
 
@@ -754,6 +912,10 @@ $colorMain: #BEA67B;
     text-align: center;
     font-size: 40px;
     margin: 0 0 15px 0;
+
+    @media screen and (max-width: 500px){
+      font-size: 35px;
+    }
   }
 
   &__ul{
@@ -763,6 +925,11 @@ $colorMain: #BEA67B;
       text-align: left;
       padding: 0 0 0 30px;
     }
+
+    @media screen and (max-width: 800px){
+      width: 70%;
+      margin: 0 auto;
+    }
   }
 
   &__li{
@@ -770,6 +937,10 @@ $colorMain: #BEA67B;
     color: white;
     font-size: 20px;
     line-height: 22px;
+
+    @media screen and (max-width: 500px){
+      font-size: $descriptionMobile;
+    }
 
     &:first-child{
       padding: 10px 0 5px 0;
@@ -782,6 +953,18 @@ $colorMain: #BEA67B;
     line-height: 22px;
     width: 100%;
     text-align: center;
+
+    @media screen and (max-width: 800px){
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 500px){
+      width: 70%;
+      font-size: 16px;
+      line-height: 20px;
+      font-size: $descriptionMobile;
+    }
   }
 
 
@@ -790,9 +973,18 @@ $colorMain: #BEA67B;
     background-image: url(../images/temp__pic4.jpg);
     background-size: cover;
 
+    @media screen and (max-width: 1000px){
+      background-position-x: center;
+    }
+
     &--darken{
       background-color: rgba(1, 1, 1, 0.7);
       padding: 200px 0;
+
+      @media screen and (max-width: 800px){
+        padding: 50px 0;
+      }
+  
     }
   }
 }
@@ -809,6 +1001,10 @@ $colorMain: #BEA67B;
     padding: 50px;
   }
 
+  @media screen and (max-width: 550px){
+    padding: 50px 25px;    
+  }
+
   
   
   &__headline{
@@ -819,6 +1015,10 @@ $colorMain: #BEA67B;
     text-transform: uppercase;
     color: $colorMain;
     position: relative;
+
+    @media screen and (max-width: 550px){
+      max-width: 300px;    
+    }
 
     &::before{
       content: '';
@@ -867,6 +1067,10 @@ $colorMain: #BEA67B;
         display: none;
       }
     }
+
+    @media screen and (max-width: 550px){
+      font-size: $descriptionMobile;
+    }
   }
 
   &__btn{
@@ -885,6 +1089,10 @@ $colorMain: #BEA67B;
     cursor: pointer;
     transition-duration: 0.3s;
 
+    @media screen and (max-width: 550px){
+      max-width: none;
+    }
+
     &:hover{
       border-color: $colorMain;
       color: $colorMain;
@@ -894,12 +1102,22 @@ $colorMain: #BEA67B;
     background-image: url(../images/temp__pic5.jpg);
     background-size: cover;
 
+    @media screen and (max-width: 550px){
+      background-position-x: center;
+    }
+
     &--darken{
       background-color: rgba(1, 1, 1, 0.7);
       padding: 90px 180px;
       
       @media screen and (max-width: 750px){
         padding: 90px;   
+      }
+
+      @media screen and (max-width: 550px){
+        padding: 50px 25px;
+        background-position-x: left;
+        background-size: none;   
       }
     }
   }
@@ -1007,6 +1225,11 @@ input::-webkit-inner-spin-button {
     margin: 0 0 35px 0;
     position: relative;
     text-transform: uppercase;
+
+    @media screen and (max-width: 950px){
+      font-size: 30px;
+      margin: 0 0 20px;
+    }
     
     &::before{
       content: '';
@@ -1053,6 +1276,10 @@ input::-webkit-inner-spin-button {
       &::before{
         display: none;
       }
+    }
+
+    @media screen and (max-width: 550px){
+      font-size: $descriptionMobile;
     }
   }
 
@@ -1105,6 +1332,23 @@ input::-webkit-inner-spin-button {
 
   &__wrapper{
     padding: 140px 0 125px 0;
+
+    @media screen and (max-width: 1000px){
+      padding: 100px 0;
+    }
+
+    @media screen and (max-width: 900px){
+      padding: 100px 0 65px 0;
+    }
+
+    @media screen and (max-width: 900px){
+      padding: 50px 0 33px 0;
+    }
+
+    @media screen and (max-width: 650px){
+      padding: 30px 0 0 0;
+    }
+    
   }
 }
 

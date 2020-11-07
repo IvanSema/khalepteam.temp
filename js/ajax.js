@@ -16,8 +16,12 @@ $(function () {
         url: $form.attr("action"),
         data: $form.serialize(),
       })
-        .done(success())
-        .fail(fail());
+        .done(function() {
+          success();
+        })
+        .fail(function(){
+          fail();
+        });
       e.preventDefault();
     });
   });
