@@ -51,12 +51,11 @@ btn.addEventListener('click', toggleForm);
 const burger = document.querySelector('.menu__burger');
 const menu_wrapper = document.querySelector('.menu__wrapper')
 const burger_wrapper = document.querySelector('.nav');
-const width = document.documentElement.clientWidth
 
 function showBurger(){
+    const width = document.documentElement.clientWidth
     burger_wrapper.style.display = 'flex';
     console.log(burger_wrapper.style);
-
 
     burger_wrapper.style.top = 0 + 'px';
     burger_wrapper.style.left = 0 + 'px';
@@ -64,8 +63,7 @@ function showBurger(){
 }
 
 function hideBurger(){
-    console.log(4);
-    if(width < 1000){
+    if(document.documentElement.clientWidth < 1000){
         burger_wrapper.style.display = 'none';
     }
 }

@@ -37,11 +37,18 @@ body {
   align-items: center;
 }
 
+
 .swiper-pagination-bullets {
   left: 10% !important;
   width: 0 !important;
   top: 50% !important;
   transform: translate(-50%);
+}
+
+@media screen and (max-width: 750px){
+  .swiper-pagination-bullets {
+    left: 25px !important;
+  }
 }
 
 .swiper-pagination-bullet {

